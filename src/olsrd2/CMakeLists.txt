@@ -27,8 +27,8 @@ set (OONF_APP_DEFAULT_CFG_HANDLER Compact)
 #################################
 
 IF (NOT OONF_STATIC_PLUGINS)
-    set (OONF_STATIC_PLUGINS class
-                             clock
+    set (OONF_STATIC_PLUGINS class              # subsystems
+                             clock              # ...
                              duplicate_set
                              layer2
                              packet_socket
@@ -38,25 +38,25 @@ IF (NOT OONF_STATIC_PLUGINS)
                              telnet
                              timer
                              viewer
-                             os_clock
-                             os_fd
+                             os_clock           # subsystems: os_*
+                             os_fd              # ...
                              os_interface
                              os_routing
                              os_system
-                             cfg_compact
-                             layer2info
-                             systeminfo
-                             nhdp
-                             ff_dat_metric
-                             link_config
-                             neighbor_probing
-                             nhdpinfo
-                             olsrv2
-                             olsrv2info
-                             netjsoninfo
-                             lan_import
-                             auto_ll4
-                             http
+                             cfg_compact        # generic
+                             layer2info         # generic
+                             systeminfo         # generic
+                             nhdp               # nhdp
+                             ff_dat_metric      # nhdp
+                             link_config        # generic
+                             neighbor_probing   # nhdp
+                             nhdpinfo           # nhdp
+                             olsrv2             # olsrv2
+                             olsrv2info         # olsrv2
+                             netjsoninfo        # olsrv2
+                             lan_import         # olsrv2
+                             auto_ll4           # nhdp
+                             http               # subsystems
                              )
 ENDIF (NOT OONF_STATIC_PLUGINS)
 
